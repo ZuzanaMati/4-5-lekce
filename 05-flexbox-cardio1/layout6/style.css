@@ -15,8 +15,37 @@ nav {
 	background: lightsteelblue;
 }
 
-/* -------------------------------------------- */
-/* tady piš svoje CSS */
-/* -------------------------------------------- */
+body {
+	margin: 0;
+	padding: 0;
+}
 
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
 
+header {
+	height: 20vh;
+	width: 100vw;
+}
+
+nav {
+	width: 20vw;
+	height: 60vh;
+}
+
+article {
+	width: 60vw;
+	height: 60vh;
+}
+
+aside {
+	width: 20vw;
+	height: 60vh;
+}
+
+footer {
+	height: 20vh;
+	width: 100vw;
+}

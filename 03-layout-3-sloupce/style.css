@@ -1,5 +1,9 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
 
 body {
 	font-family: sans-serif;
@@ -9,10 +13,47 @@ body {
 	padding: 20px;
 }
 
-.hlavicka	{ background-color: #2ecc71; }
-.hlavni		{ background-color: #f1c40f; }
-.levy		{ background-color: #3498db; }
-.pravy		{ background-color: #e74c3c; }
-.paticka	{ background-color: #9b59b6; }
+.hlavicka {
+	background-color: #2ecc71;
+}
+
+.hlavni {
+	background-color: #f1c40f;
+}
+
+.levy {
+	background-color: #3498db;
+}
+
+.pravy {
+	background-color: #e74c3c;
+}
+
+.paticka {
+	background-color: #9b59b6;
+}
 
 /* ---------------------------------------------------- */
+
+.kontejner {
+	display: flex;
+}
+
+/* sloupce se radi dle cisla vzetupne zleva doprava od 0 dal 
+u leveho sloupce musim nastavit vlastnost shrink na 0 tzn ja nechci aby se mi smrstoval, protoze mu chci
+nastavit velikost 200px a tu chci at si zanecha a ne at se smrskne protoze ostatni sloupce vedle jsou
+vetsi */
+
+.levy {
+	order: 1;
+	flex-basis: 200px;
+	flex-shrink: 0;
+}
+
+.hlavni {
+	order: 2;
+}
+
+.pravy {
+	order: 3;
+}

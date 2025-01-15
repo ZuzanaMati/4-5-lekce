@@ -1,5 +1,9 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
 
 .ctverecek {
     font: 30px/1 sans-serif;
@@ -7,11 +11,25 @@
     border: 1px solid black;
 }
 
-.ctverecek:nth-child(5n+1) { background-color: #2ecc71;}
-.ctverecek:nth-child(5n+2) { background-color: #f1c40f;}
-.ctverecek:nth-child(5n+3) { background-color: #3498db;}
-.ctverecek:nth-child(5n+4) { background-color: #e74c3c;}
-.ctverecek:nth-child(5n+5) { background-color: #9b59b6;}
+.ctverecek:nth-child(5n+1) {
+    background-color: #2ecc71;
+}
+
+.ctverecek:nth-child(5n+2) {
+    background-color: #f1c40f;
+}
+
+.ctverecek:nth-child(5n+3) {
+    background-color: #3498db;
+}
+
+.ctverecek:nth-child(5n+4) {
+    background-color: #e74c3c;
+}
+
+.ctverecek:nth-child(5n+5) {
+    background-color: #9b59b6;
+}
 
 .kontejner {
     padding: 10px;
@@ -21,3 +39,42 @@
 
 /* ---------------------------------------------------- */
 
+.kontejner {
+    display: flex;
+}
+
+/* flex grow je automaticky nastaven na 0 a pomoc flex grow my muzeme vlastnost roztahovani se zapnout.
+bere to pr8znde misto a pomerove ho rozdeli mezi ty prvky, ktere maji zapnute flex grow, pracuje se pouze
+s volnym prostorem co zbyde po tom, co si ostatni prvky zaberou svoje misto
+
+.druhy {
+    flex-grow: 2;
+}
+
+.treti {
+    flex-grow: 1;
+} */
+
+/* muze se stat, ze nam obsah toho flexboxu pretece, ve chvili kdy mam nekde dlouhy text a prvky jsou
+cedle sebe tak pak musim scrolovat do bohu abych mohla neco precist, proto je automaticky hodnota shrink
+nastavena na 1 tzn ze se to nestane, aby to nepreteklo, bere ten prostor ktery pretekl, tak shrink
+osekava ten prebyvajici prostor abychom prave nemuseli scrolovat doboku a hezky se to zalamovalo */
+
+/* tohle veze pomer toho co prebyva a rozdeli ho mezi ty dva prvky v pomeru 7:1 a podle toho se bude
+odvijet velikost boxu 
+
+.prvni {
+flex-shrink: 7;
+}
+
+.druhy {
+    flex-shrink: 1;
+} */
+
+/* flex basis je vychozi velikost polozky rikam jak velky ten box ma byt na rozdil od flex grow ktery
+bere jen to zbyvajici volne misto, ktere se ale meni podle toho jake okolni polozky misto zabiraji,
+basis vezme tady napr 25% velikosti rodice a rozdeli ho mezi dane prvky */
+
+.ctverecek {
+    flex-basis: 25%;
+}

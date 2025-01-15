@@ -5,6 +5,7 @@
 header,
 footer {
 	background: yellowgreen;
+	min-height: 20vh;
 }
 
 aside {
@@ -15,8 +16,42 @@ nav {
 	background: lightsteelblue;
 }
 
-/* -------------------------------------------- */
-/* tady piš svoje CSS */
-/* -------------------------------------------- */
+body {
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+	margin: 0px;
+}
+
+nav {
+	height: 100vh;
+	width: 20vw;
+}
+
+.outer-col {
+	display: flex;
+	flex-direction: column;
+	flex: 6;
+}
+
+.inner-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.inner-col {
+	display: flex;
+	flex-direction: column;
+	flex: 4;
+}
+
+.inner-row article {
+	min-height: 60vh;
+}
+
+.inner-row aside {
+	flex: 1;
+}
+
 
 

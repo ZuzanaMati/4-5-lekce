@@ -1,5 +1,9 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
 
 /* barvicky elementů na stránce */
 header,
@@ -13,10 +17,41 @@ aside {
 
 nav {
 	background: lightsteelblue;
+	height: 100vh;
+	width: 20vw;
 }
 
-/* -------------------------------------------- */
-/* tady piš svoje CSS */
-/* -------------------------------------------- */
+body {
+	display: flex;
+	flex-direction: row;
+}
 
+header {
+	height: 20vh;
+	width: 80vw;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex: 5;
+}
+
+.rest {
+	display: flex;
+	flex-direction: row;
+	height: 60vh;
+}
+
+article {
+	width: 60vw;
+}
+
+aside {
+	width: 20vw;
+}
+
+footer {
+	height: 20vh;
+}
 
